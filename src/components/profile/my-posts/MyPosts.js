@@ -2,7 +2,10 @@ import React from "react";
 import style from './MyPosts.module.scss';
 import Post from "./post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
+    let posts = props.postData.map(p => <Post message={p.message} likes={p.likes}/>)
+
     return(
         <div className={style.posts}>
             <h3 className={style.title}>My posts</h3>
@@ -11,8 +14,7 @@ const MyPosts = () => {
                 <button className={style.send}>Send</button>
             </div>
             <div className={style.publicPosts}>
-                <Post message='Hello, how are you' likes='15'/>
-                <Post message='My first post' likes='20'/>
+                { posts }
             </div>
         </div>
     )

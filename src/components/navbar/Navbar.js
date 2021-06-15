@@ -1,11 +1,12 @@
 import React from "react";
 import style from './Navbar.module.scss';
+import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
     return(
         <nav className={style.nav}>
-            <a href="/profile" className={`${style.item} ${style.active}`}>Profile</a>     {/* Так мы добавляем несколько классов*/}
-            <a href="/dialogs" className={style.item}>Messages</a>
+            <NavLink to="/profile" className={style.item} activeClassName={style.active}>Profile</NavLink>     {/* Так мы добавляем несколько классов*/}
+            <NavLink to="/dialogs" className={style.item} activeClassName={style.active}>Messages</NavLink>
         </nav>
     )
 }
