@@ -14,5 +14,49 @@
     }
     .messages{
         padding-left: 20px;
+
+        .textarea{
+            display: block;
+            width: 100%;
+            min-height: 20px;
+            height: auto;
+
+            margin-top: 50px;
+
+           textarea{
+               width: calc(100% - 20px);
+               heigth: auto;
+               font-family: 'Arial';
+               font-size: 16px;
+
+               border: 2px #c2c2c2 solid;
+               border-radius: 10px;
+               outline: none;
+
+               padding: 10px;
+               margin-bottom: 15px;
+               resize: none;
+           }
+        }
+        button{
+            width: 150px;
+            height: 40px;
+
+            font-family: 'Arial';
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+
+            background: #268be8;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+
+            transition: background 0.2s;
+
+            &:hover{
+                background: #1b83e3;
+            }
+        }
     }
 }

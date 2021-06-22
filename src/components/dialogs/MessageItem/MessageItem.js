@@ -3,7 +3,10 @@ import style from './MessageItem.module.scss';
 
 const MessageItem = (props) => {
     return(
-        <div className={style.message}>{props.text}</div>
+        <div>
+            <div className={style.message}>{props.text}</div>
+        </div>
+
     )
 }
 

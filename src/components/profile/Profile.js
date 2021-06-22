@@ -2,8 +2,6 @@ import React from "react";
 import style from './Profile.module.scss';
 import MyPosts from "./my-posts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
-import DialogItem from "../dialogs/DialogItem/DialogItem";
-import MessageItem from "../dialogs/MessageItem/MessageItem";
 
 const Profile = (props) => {
 
@@ -13,7 +11,11 @@ const Profile = (props) => {
 
             <ProfileInfo/>
 
-            <MyPosts postData={props.postData}/>
+            <MyPosts
+                postData={props.state.postData}
+                dispatch={props.dispatch}
+                newPostText={props.state.newPostText}
+            />
 
         </div>
     )
